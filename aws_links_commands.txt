@@ -1,0 +1,41 @@
+### Set up credentials file
+1) link to the youtube video on Windows Linux Subsystem setup - https://www.youtube.com/watch?v=Cvrqmq9A3tA
+
+2) Command to change access permission on the identification key file (.pem file)
+
+>> ls -la ~
+>>chmod go-rwx filename.pem
+>>chmod u-wx filename.pem
+
+### Connect
+1) ssh command to connect to your instance
+
+>>ssh -i <identification key path> <instance_username@instance_ip>
+
+2) link to documentation on installing python and pip in your ec2 instance
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-linux.html
+
+### Transfer files
+1) scp command to trabsfer files/folders from your local pc to your ec2 instance
+
+>>scp -i <identification key path> <path to file in your local pc> <instance_username@instance_ip>:<instance path where the file will be saved>
+>>scp -i <identification key path> -r <path to folder in your local pc> <instance_username@instance_ip>:<instance path where the folder will be saved>
+
+2) Basic introduction of VIM editor - https://www.linux.com/tutorials/vim-101-beginners-guide-vim/
+
+i - enter insert mode
+esc - exit insert mode
+:wq! - close the file after saving changes
+:q! - close the file without making any changes
+
+### Automating
+1) Basic introduction of crontab - https://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
+>>service crond status
+>>start crond service
+>>crontab -e
+sample crontab command to run you file every day at 9 am (monday to friday)
+
+00 09 * * 1-5 /path/to/file
+
+2) Link to change timezone for EC2 instance - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html
