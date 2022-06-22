@@ -4,7 +4,7 @@ fxcmpy==1.2.1
 lxml==3.7.3
 matplotlib==2.2.2
 nltk>=3.4.5
-numpy==1.14.2
+numpy==1.22.0
 pandas==0.20.1
 pandas-datareader==0.5.0
 requests==2.21.0
